@@ -1,0 +1,116 @@
+*,
+*:before,
+*:after {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  word-break: break-all;
+}
+/* 显示隐藏 */
+.hidden {
+  display: none;
+}
+/**清除浮动 */
+.clearfix {
+  zoom: 1;
+}
+.clearfix::after {
+  clear: both;
+}
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: table;
+}
+
+/**
+css 更改鼠标为手状样式
+auto                    ：标准光标  
+default                 ：标准箭头  
+pointer, hand           ：手形光标  
+wait                    ：等待光标  
+text                    ：I形光标  
+vertical-text           ：水平I形光标  
+no-drop                 ：不可拖动光标  
+not-allowed             ：无效光标  
+help                    ：帮助光标  
+all-scroll              ：三角方向标  
+move                    ：移动标  
+crosshair               ：十字标 
+ */
+i,
+span,
+a {
+  cursor: pointer;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+a {
+  color: #34495e;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+  color: #1890ff;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+body {
+  background-color: rgb(246, 246, 246);
+  color: #555;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  text-rendering: optimizeLegibility;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
