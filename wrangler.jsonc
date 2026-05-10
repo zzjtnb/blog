@@ -1,0 +1,13 @@
+{
+  "name": "blog",
+  "compatibility_date": "2026-05-10",
+  "assets": {
+    "directory": "./dist"
+  },
+  "routes": [
+    {
+      "pattern": "blog.zzjtnb.com",
+      "custom_domain": true
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+html {
+  scrollbar-color: var(--zz-border-strong) transparent;
+  scrollbar-width: thin;
+  scroll-padding-top: 78px;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--zz-text);
+  background: var(--zz-paper-soft);
+}
+
+#app,
+.Layout,
+.VPContent,
+.VPPage,
+.VPDoc,
+.VPDoc .container,
+.VPDoc .content,
+.VPSidebar {
+  background: var(--zz-paper-soft) !important;
+}
+
+
+body.zz-home-page,
+.zz-home-page {
+  background:
+    radial-gradient(circle at 8% 10%, color-mix(in srgb, var(--zz-cinnabar) 14%, transparent), transparent 28rem),
+    radial-gradient(circle at 88% 4%, color-mix(in srgb, var(--zz-jade) 13%, transparent), transparent 30rem),
+    linear-gradient(125deg, var(--zz-home-bg), var(--zz-paper) 52%, var(--zz-bg-soft));
+}
+
+body.zz-blog-page,
+.zz-blog-page,
+.zz-blog-page body,
+.zz-blog-page .VPContent,
+.zz-blog-page .VPPage {
+  background: var(--zz-paper-soft) !important;
+}
+
+body.zz-blog-page::before,
+.zz-blog-page::before,
+.zz-blog-page body::before {
+  display: none;
+}
+
+::selection {
+  color: var(--zz-paper-soft);
+  background: var(--zz-cinnabar);
+}
+
+.zz-home-page .VPContent,
+.zz-blog-page .VPContent {
+  padding-top: 58px;
+}
+
+.zz-home-page .VPPage,
+.zz-blog-page .VPPage {
+  padding: 0;
+}
+
+.zz-home-page .vp-doc,
+.zz-blog-page .vp-doc {
+  max-width: none;
+  padding: 0;
+}
+
+@media (width < 960px) {
+  html {
+    scroll-padding-top: 68px;
+  }
+}

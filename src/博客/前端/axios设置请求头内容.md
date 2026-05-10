@@ -1,0 +1,55 @@
+---
+title: 'axios设置请求头内容'
+description: 'axios设置请求头中的Authorization 和 cookie 信息 GET请求 POST请求'
+date: '2019-11-11 13:50:19'
+updated: ''
+category: '前端'
+tags:
+  - 'Axios'
+cover: 'https://cdn.pixabay.com/photo/2020/06/08/19/31/jellyfish-5275858_960_720.jpg'
+hot: false
+sourceId: 98
+sourcePath: 'axiosszqqtnr'
+---
+# axios设置请求头中的Authorization 和 cookie 信息
+
+**GET请求**
+
+```js
+axios.get(urlString, 
+    {
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            "Cookie" : 'sessionId=' + sessionId + '; recId=' + recId,
+            ...
+        },
+        params: {
+            param1: string,
+            param2: string
+        },
+        ...
+    }
+)
+.then(res => fn)
+.catch(e => fn)
+```
+
+**POST请求**
+
+```js
+axios.post(urlString, 
+    {
+        data: data,
+        ...
+    },
+    {
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            "Cookie" : 'sessionId=' + sessionId + '; recId=' + recId,
+            ...
+        }
+    }
+)
+.then(res => fn)
+.catch(e => fn)
+```

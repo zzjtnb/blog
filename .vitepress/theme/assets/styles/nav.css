@@ -1,0 +1,164 @@
+.VPNav,
+.VPNavBar {
+  border-bottom: 1px solid color-mix(in srgb, var(--zz-border) 80%, transparent);
+  background: var(--zz-paper-soft) !important;
+}
+
+.VPNavBar .container,
+.VPNavBar .content,
+.VPNavBar .content-body,
+.VPNavBarTitle {
+  background: var(--zz-paper-soft) !important;
+}
+
+.dark .VPNav,
+.dark .VPNavBar {
+  background: color-mix(in srgb, var(--zz-bg) 84%, transparent) !important;
+}
+
+.VPNavBar .content,
+.VPNavBar .content-body {
+  border-bottom-color: transparent;
+  background: transparent;
+}
+
+.VPNavBar .content-body,
+.VPNavBarTitle {
+  height: 58px;
+}
+
+.VPNavBarTitle .title {
+  position: relative;
+
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+
+  height: 58px;
+  padding: 0;
+  border: 0;
+
+  color: var(--zz-text);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.VPNavBarTitle .title::after {
+  content: "山河成卷";
+
+  display: inline-flex;
+  align-items: center;
+
+  height: 22px;
+  padding-left: 10px;
+  border-left: 1px solid var(--zz-border);
+
+  font-family: "Noto Serif SC", "Noto Sans SC", serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: var(--zz-text-muted);
+  letter-spacing: 0.14em;
+}
+
+.VPNavBarTitle .logo {
+  width: 38px;
+  height: 38px;
+  border: 1px solid color-mix(in srgb, var(--zz-cinnabar) 36%, transparent);
+  border-radius: 11px;
+
+}
+
+.VPNavBarTitle .title span {
+  font-family: "Liu Jian Mao Cao", "Ma Shan Zheng", STXingkai, KaiTi, cursive;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--zz-cinnabar);
+  letter-spacing: 0.16em;
+}
+
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button {
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 999px;
+}
+
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .button span {
+  font-family: "Noto Serif SC", "Noto Sans SC", serif;
+  font-size: 0.94rem;
+  font-weight: 900;
+  color: var(--zz-text);
+}
+
+.VPNavBarMenuLink.active,
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuGroup.active .button,
+.VPNavBarMenuGroup .button:hover,
+.VPNavBarMenuGroup .button[aria-expanded="true"] {
+  background: color-mix(in srgb, var(--zz-cinnabar) 10%, transparent);
+}
+
+.VPNavBarMenuLink.active,
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuGroup.active .button span,
+.VPNavBarMenuGroup .button:hover span,
+.VPNavBarMenuGroup .button[aria-expanded="true"] span {
+  color: var(--zz-cinnabar);
+}
+
+.VPMenu,
+.VPNavScreen {
+  border: 1px solid var(--zz-border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--zz-surface) 94%, transparent) !important;
+}
+
+.DocSearch-Button,
+.VPSwitch {
+  border: 1px solid var(--zz-border) !important;
+  background: color-mix(in srgb, var(--zz-surface) 84%, transparent) !important;
+}
+
+.VPSocialLink {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.DocSearch-Button:hover {
+  border-color: var(--zz-border-strong) !important;
+}
+
+@media (width >= 960px) {
+  .VPNavBar.has-sidebar .container > .title {
+    width: var(--zz-sidebar-width) !important;
+    padding-left: 24px !important;
+  }
+
+  .VPNavBarTitle.has-sidebar {
+    padding-left: 0 !important;
+  }
+
+  .VPNavBarTitle.has-sidebar .title {
+    width: fit-content !important;
+  }
+
+  .VPSidebar {
+    width: var(--zz-sidebar-width) !important;
+    padding-right: 18px !important;
+    padding-left: 24px !important;
+  }
+
+  .VPNavBar.has-sidebar .content,
+  .VPContent.has-sidebar {
+    padding-right: 24px !important;
+    padding-left: var(--zz-sidebar-width) !important;
+  }
+}
+
+@media (width < 720px) {
+  .VPNavBarTitle .title::after {
+    display: none;
+  }
+}
